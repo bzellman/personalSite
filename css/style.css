@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-header,
 .fh5co-cover {
-  background-color: transparent;
+  : transparent;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   content: " ";
   width: 2px;
-  background-color: #e6e6e6;
+  : #e6e6e6;
   left: 50%;
   margin-left: 0px;
 }
@@ -532,7 +532,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 50%;
   margin-left: -21px;
-  background-color: #00c2ff;
+  : #00c2ff;
   z-index: 100;
   display: table;
   -webkit-border-radius: 50%;
@@ -663,25 +663,25 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .progress-bar {
-  background-color: #2F3C4F;
+  : #2F3C4F;
   height: 5px;
   display: block;
   box-shadow: none;
 }
 .progress-bar.progress-bar-1 {
-  background-color: #2980b9 !important;
+  : #2980b9 !important;
 }
 .progress-bar.progress-bar-2 {
-  background-color: #c0392b !important;
+  : #c0392b !important;
 }
 .progress-bar.progress-bar-3 {
-  background-color: #d35400 !important;
+  : #d35400 !important;
 }
 .progress-bar.progress-bar-4 {
-  background-color: #8e44ad !important;
+  : #8e44ad !important;
 }
 .progress-bar.progress-bar-5 {
-  background-color: #27ae60 !important;
+  : #27ae60 !important;
 }
 
 .chart {
