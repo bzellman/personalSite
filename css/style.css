@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-header,
 .fh5co-cover {
-  : transparent;
+  background-color: transparent;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #00c2ff;
+  background: rgba(0, 194, 255, 0.9);
 }
 #fh5co-header .display-t,
 .fh5co-cover .display-t {
@@ -420,7 +420,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-heading p {
   font-size: 18px;
   line-height: 1.5;
-  : #828282;
+  color: #828282;
 }
 .fh5co-heading span {
   display: block;
@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   content: " ";
   width: 2px;
-  : #e6e6e6;
+  background-color: #e6e6e6;
   left: 50%;
   margin-left: 0px;
 }
@@ -532,7 +532,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 50%;
   margin-left: -21px;
-  : #00c2ff;
+  background-color: #00c2ff;
   z-index: 100;
   display: table;
   -webkit-border-radius: 50%;
@@ -663,25 +663,25 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .progress-bar {
-  : #2F3C4F;
+  background-color: #2F3C4F;
   height: 5px;
   display: block;
   box-shadow: none;
 }
 .progress-bar.progress-bar-1 {
-  : #2980b9 !important;
+  background-color: #2980b9 !important;
 }
 .progress-bar.progress-bar-2 {
-  : #c0392b !important;
+  background-color: #c0392b !important;
 }
 .progress-bar.progress-bar-3 {
-  : #d35400 !important;
+  background-color: #d35400 !important;
 }
 .progress-bar.progress-bar-4 {
-  : #8e44ad !important;
+  background-color: #8e44ad !important;
 }
 .progress-bar.progress-bar-5 {
-  : #27ae60 !important;
+  background-color: #27ae60 !important;
 }
 
 .chart {
