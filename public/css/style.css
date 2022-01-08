@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: white;
 }
 #fh5co-header .display-tc h1,
-.fh5co-cover .display-tc h1 {
+.fh5co-cover .display-tc h1{
   font-family: "Kaushan Script", cursive;
   margin-bottom: 30px;
   font-size: 50px;
@@ -1290,4 +1290,12 @@ input[type="text"] {
   opacity: 0;
 }
 
+.contact-box {
+  padding: 20px;
+  background-color: #e6e6e6;
+}
+
+.form-control {
+  background-color: #fff;
+}
 /*# sourceMappingURL=style.css.map */
