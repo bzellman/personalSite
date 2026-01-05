@@ -3,3 +3,6 @@ steps:
     args: ["-m", "rsync", "-r", "-c", "-d", ".", "gs://www.bradzellman.com"]
   - name: gcr.io/cloud-builders/gsutil
     args: ["acl", "ch", "-u", "AllUsers:R", "gs://www.bradzellman.com/index.html"]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
