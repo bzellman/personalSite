@@ -1,249 +1,50 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Brad Zellman</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brad Zellman — Founder & Technical Operator</title>
+  <meta name="description" content="Brad Zellman is a founder and technical operator in Austin, building AI agents, automation, and pragmatic software systems." />
+  <link rel="canonical" href="https://bradzellman.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Brad Zellman — Founder & Technical Operator" />
+  <meta property="og:description" content="AI agents, technical program leadership, internal tools, and pragmatic software systems." />
+  <meta property="og:image" content="/images/me.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;900&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brad Zellman",
+    "url": "https://bradzellman.com/",
+    "jobTitle": "Founder & Technical Operator",
+    "address": {"@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX"},
+    "sameAs": ["https://github.com/bzellman", "https://www.linkedin.com/in/bszell", "https://zibby.ai"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-shell>
+    <a class="brand" href="#home" aria-label="Brad Zellman home">
+      <span class="brand-mark" data-bind="site.shortName">BZ</span>
+      <span class="brand-name" data-bind="site.name">Brad Zellman</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation" data-nav></nav>
+    <a class="header-email" data-bind-href="mailto:site.email" href="mailto:bszells@gmail.com" data-bind="site.email">bszells@gmail.com</a>
+  </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Brad</strong> <span>Zellman</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+  <main id="main" data-root>
+    <section class="loading-state" aria-live="polite">
+      <p>Loading Brad’s site content…</p>
+    </section>
+  </main>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="profile.html">Profile</a></li>
-							<li><a href="scordle.html">Scordle</a></li>
-							<li><a href="tables2.html">Tables2</a></li>
-							<li><a href="tidi.html">Tidi</a></li>
-							<li><a href="magiccuts.html">MagicCuts</a></li>
-						</ul>
-					</nav>
-
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<div class="banner-with-image"> 
-								<div class="banner-with-image-left">
-									<header class="major">
-										<h1>Hi, I'm Brad</h1>								 
-									</header>
-									<div class="content">
-										<p>I like big ideas<br />
-										I love executing them</p>
-									<ul class="actions">
-										<li><a href="#one" class="button next scrolly">Get Started</a></li>
-									</ul>
-									</div>
-								</div>
-								<!-- <div class= "banner-with-image-right"> 
-									<img src="images/me.png" alt="tidi-logo"/>		
-								</div> -->
-							</div>							
-						</div>					
-					</section>
-					
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-										<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<div class="tile-with-image"> 
-										<div class="tile-with-image-left">
-											<header class="major">
-												<h3><a href="profile.html" class="link">About Me</a></h3>
-												<p>Work Experience & Profile</p>								 
-											</header>
-										</div>
-										<div class= "tile-with-image-right"> 
-												<img src="images/me.png" alt="tidi-logo"/>		
-										</div>	
-									</div>
-									<!-- </div> -->
-									
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<div class="tile-with-image"> 
-										<div class="tile-with-image-left">
-											<header class="major">
-												<h3><a href="scordle.html" class="link">Scordle</a></h3>
-												<p>Share your Wordle Scores with Friends</p>							 
-											</header>
-										</div>
-										<div class= "tile-with-image-right"> 
-												<img src="images/scordle-icon.png" alt="tidi-logo"/>		
-										</div>	
-									</div>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<div class="tile-with-image"> 
-										<div class="tile-with-image-left">
-											<header class="major">
-												<h3><a href="tidi.html" class="link">Tidi</a></h3>
-												<p>Keep your Mac clean and organize</p>								 
-											</header>
-										</div>
-										<div class= "tile-with-image-right"> 
-												<img src="images/tidi-logo.png" alt="tidi-logo"/>		
-										</div>	
-									</div>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<div class="tile-with-image"> 
-										<div class="tile-with-image-left">
-											<header class="major">
-												<h3><a href="tables2.html" class="link">Tables 2</a></h3>
-												<p>Makes Lists and JSON from Tables in GDoc</p>							 
-											</header>
-										</div>
-										<div class= "tile-with-image-right"> 
-												<img src="images/quick-ticket-icon.jpeg" alt="tidi-logo"/>		
-										</div>	
-									</div>
-								</article>								
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<div class="tile-with-image"> 
-										<div class="tile-with-image-left">
-											<header class="major">
-												<h3><a href="https://chrome.google.com/webstore/detail/quick-ticket-for-jira/ijnjaonacljoilohdijikmlnhaigehic?hl=en" class="link">Quick Ticket</a></h3>
-												<p>Get to Jira tickets fast</p>							 
-											</header>
-										</div>
-										<div class= "tile-with-image-right"> 
-												<img src="images/quick-ticket-icon.jpeg" alt="tidi-logo"/>		
-										</div>	
-									</div>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<div class="tile-with-image">
-										<div class="tile-with-image-left">
-											<header class="major">
-												<h3><a href="magiccuts.html" class="link">MagicCuts</a></h3>
-												<p>Bluetooth Proximity for iOS Shortcuts</p>
-											</header>
-										</div>
-										<div class= "tile-with-image-right">
-												<img src="images/magiccuts-icon.png" alt="magiccuts-logo"/>
-										</div>
-									</div>
-								</article>
-					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<h2>Get In Touch</h2>
-								<form id="contactForm">
-									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="demo-name" id="inputName" value="" placeholder="Name" />
-										</div>
-										<div class="col-6 col-12-xsmall">
-											<input type="email" name="demo-email" id="inputEmail" value="" placeholder="Email" />
-										</div>
-										<div class="col-12">
-											<select name="inputCategory" id="inputCategory">
-												<option value="">-Reason-</option>
-												<option value="1">Get In Touch</option>
-												<option value="2">App:Feedback</option>
-												<option value="3">App: Bug Report</option>												
-											</select>
-										</div>
-										<div class="col-12">
-											<textarea name="demo-message" id="inputMessage" placeholder="Message" rows="6"></textarea>
-										</div>
-										<div class="col-12">
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="primary" /></li>
-												<li><input type="reset" value="Reset" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">bszells@gmail.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Made with love and coffee in Austin, TX</h3>
-										
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://github.com/bzellman/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/bszell" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Bradley Zellman</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/app.js"></script>
-
-	</body>
+  <footer class="site-footer" data-footer></footer>
+  <script src="/assets/js/site.js" type="module"></script>
+</body>
 </html>
