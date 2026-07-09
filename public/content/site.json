@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "title": "Brad Zellman \u2014 Founder & Technical Operator",
+    "description": "Brad Zellman is a founder and technical operator in Austin, building AI agents, automation, and pragmatic software systems.",
+    "canonical": "https://bradzellman.com/",
+    "image": "/images/me.png"
+  },
+  "site": {
+    "name": "Brad Zellman",
+    "shortName": "BZ",
+    "email": "bszells@gmail.com",
+    "location": "Austin, TX",
+    "availability": "Open to agentic software, workflow automation, and founder/operator conversations.",
+    "socials": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/bzellman"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/bszell"
+      },
+      {
+        "label": "Zibby AI",
+        "href": "https://zibby.ai"
+      }
+    ],
+    "nav": [
+      {
+        "label": "Projects",
+        "href": "#projects"
+      },
+      {
+        "label": "Services",
+        "href": "#services"
+      },
+      {
+        "label": "Process",
+        "href": "#process"
+      },
+      {
+        "label": "Experience",
+        "href": "#experience"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Fun Stuff",
+        "href": "#shipped"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "enabled": true,
+      "eyebrow": "Founder \u00b7 technical program leader \u00b7 agent workflow builder",
+      "headline": "Brad\nZellman",
+      "subheadline": "I turn messy systems into shippable products, useful automations, and calmer teams.",
+      "body": "Austin-based first-time founder at Zibby AI. I bring the delivery discipline of streaming-scale technical program management together with hands-on product prototyping across AI agents, iOS/macOS utilities, Home Assistant, and internal workflow tools.",
+      "primaryCta": {
+        "label": "Get in touch",
+        "href": "mailto:bszells@gmail.com"
+      },
+      "secondaryCta": {
+        "label": "View GitHub",
+        "href": "https://github.com/bzellman"
+      },
+      "stats": [
+        {
+          "value": "39",
+          "label": "public GitHub repos"
+        },
+        {
+          "value": "Austin",
+          "label": "home base"
+        },
+        {
+          "value": "AI + ops",
+          "label": "current focus"
+        }
+      ]
+    },
+    "ticker": {
+      "enabled": true,
+      "items": [
+        "Zibby AI",
+        "Agentic workflows",
+        "Technical program management",
+        "iOS + macOS",
+        "Home Assistant",
+        "Streaming platforms",
+        "Internal tools",
+        "Automation"
+      ]
+    },
+    "projects": {
+      "enabled": true,
+      "label": "01.",
+      "title": "Projects",
+      "intro": "Selected platform programs and product work where the job was not just to coordinate delivery, but to make high-pressure systems shippable, resilient, and understandable.",
+      "items": [
+        {
+          "title": "Zibby AI",
+          "subtitle": "Current founder focus",
+          "description": "Building around agents, operator workflows, and the control surfaces needed to make useful AI systems feel accountable and manageable.",
+          "tags": [
+            "Founder",
+            "AI agents",
+            "Product"
+          ],
+          "href": "https://zibby.ai",
+          "image": "",
+          "featured": true
+        },
+        {
+          "title": "Super Bowl Streaming Readiness",
+          "subtitle": "Lead Technical Program Manager \u00b7 Paramount+",
+          "description": "Led technical program coordination for live-event streaming readiness across native clients, backend services, observability, launch communications, and escalation paths for a record-scale Paramount+ sports moment.",
+          "tags": [
+            "Live streaming",
+            "Reliability",
+            "TPM"
+          ],
+          "href": "https://www.yugabyte.com/blog/super-bowl-stream-paramount-plus-architecture/",
+          "image": "/images/superbowl-streaming-platform.svg"
+        },
+        {
+          "title": "Showtime Sunset \u2192 Paramount+",
+          "subtitle": "Streaming migration program",
+          "description": "Coordinated the technical migration path from standalone Showtime experiences into Paramount+, aligning app behavior, entitlement flows, communications, QA, and release sequencing around a high-visibility brand transition.",
+          "tags": [
+            "Migration",
+            "OTT",
+            "Entitlements"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Paramount%2B_with_Showtime",
+          "image": "/images/showtime-sunset-logo.png"
+        },
+        {
+          "title": "RED Hydrogen One Ecosystem",
+          "subtitle": "App/media store, developer portal, payments, DRM",
+          "description": "TPM for the app and media store, developer portal, payment infrastructure, content-partner integrations, DRM posture, MITM prevention, and global carrier-certification testing for RED\u2019s custom Android firmware ecosystem.",
+          "tags": [
+            "Mobile platform",
+            "Payments + DRM",
+            "Certification"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Red_Digital_Cinema",
+          "image": "/images/red-hydrogen-one-device.png"
+        },
+        {
+          "title": "Tradesy Growth Platform Rebuild",
+          "subtitle": "Marketplace architecture + acquisition readiness",
+          "description": "Led TPM work on a rebuild of Tradesy\u2019s database hierarchy and end-to-end stack to support growth initiatives, operational scale, and the platform maturity that preceded its acquisition by Vestiaire Collective.",
+          "tags": [
+            "Marketplace",
+            "Data model",
+            "Scale"
+          ],
+          "href": "https://en.wikipedia.org/wiki/Tradesy",
+          "image": "/images/tradesy-logo.jpeg"
+        }
+      ]
+    },
+    "services": {
+      "enabled": true,
+      "label": "03.",
+      "title": "What I\u2019m good at",
+      "intro": "Useful at the edge between product, engineering, operations, and AI \u2014 especially when the problem is ambiguous and the team still needs to ship.",
+      "items": [
+        {
+          "title": "Agentic workflow design",
+          "description": "Turn recurring operator work into agent-ready workflows, prompts, controls, and verification loops."
+        },
+        {
+          "title": "Technical program leadership",
+          "description": "Create the rituals, tooling, escalation paths, and reporting that let multidisciplinary teams move without chaos."
+        },
+        {
+          "title": "Internal tools + automation",
+          "description": "Prototype pragmatic utilities that remove copy/paste work, improve coordination, or connect otherwise-fragmented systems."
+        },
+        {
+          "title": "Mobile, streaming, and platform delivery",
+          "description": "Coordinate native app, OTT, SRE, API, QA, UX, and release work across complex product organizations."
+        },
+        {
+          "title": "Founder product strategy",
+          "description": "Pressure-test ideas, translate messy needs into shippable versions, and keep the roadmap tied to reality."
+        }
+      ]
+    },
+    "process": {
+      "enabled": true,
+      "label": "04.",
+      "title": "Process",
+      "intro": "A lightweight loop for going from vague problem to working system.",
+      "items": [
+        {
+          "title": "Map the mess",
+          "subtitle": "Understand the real workflow",
+          "description": "Inventory people, tools, incentives, failure modes, and the hidden glue work that currently makes the system function."
+        },
+        {
+          "title": "Prototype the sharp edge",
+          "subtitle": "Make the hard part tangible",
+          "description": "Build a small working slice, agent runbook, or operator surface before debating the full platform."
+        },
+        {
+          "title": "Instrument trust",
+          "subtitle": "Verification over vibes",
+          "description": "Add logs, status, approvals, tests, and feedback loops so automation earns its way into real work."
+        },
+        {
+          "title": "Ship and tighten",
+          "subtitle": "Reduce drag after launch",
+          "description": "Use what breaks in production to simplify, clarify ownership, and improve the next iteration."
+        }
+      ]
+    },
+    "experience": {
+      "enabled": true,
+      "label": "05.",
+      "title": "Experience",
+      "intro": "Older site content points to a long technical program path across streaming media, e-commerce, mobile, and internal tools. Current public GitHub profile lists Zibby AI as the active company.",
+      "items": [
+        {
+          "company": "Zibby AI",
+          "role": "Founder",
+          "period": "Current",
+          "summary": "Building AI agent and workflow systems from Austin, TX."
+        },
+        {
+          "company": "Paramount",
+          "role": "Manager / Senior Technical Project Management",
+          "period": "Streaming platforms",
+          "summary": "Led native app and PMO coordination across platform communications, readiness, reporting, releases, escalations, and agile delivery."
+        },
+        {
+          "company": "Tradesy",
+          "role": "Manager, Technical Project Management",
+          "period": "E-commerce",
+          "summary": "Led multidisciplinary Agile teams, stabilized Android delivery velocity, managed risks, documentation, and program-level communications."
+        },
+        {
+          "company": "UI Centric",
+          "role": "Senior Technical Project Manager",
+          "period": "2017\u20132021",
+          "summary": "Managed flagship streaming media products and platform work for clients including CBS, Univision, PIX System, NEP, and RED Hydrogen One."
+        },
+        {
+          "company": "Bar-Z Mobile Development",
+          "role": "Project Management Team Lead",
+          "period": "2010\u20132014",
+          "summary": "Oversaw custom app delivery, trained customers on CMS workflows, designed UI/UX, built automation scripts, and deployed an internal Rails PM system."
+        },
+        {
+          "company": "Apple",
+          "role": "Family Room Specialist",
+          "period": "2015\u20132016",
+          "summary": "Resolved customer device issues, supported business relationships, and presented educational workshops."
+        }
+      ]
+    },
+    "about": {
+      "enabled": true,
+      "label": "06.",
+      "title": "About",
+      "headline": "I like big ideas. I love executing them.",
+      "body": "My career has lived in the practical middle: product ambition, engineering reality, customer pressure, and the tools teams use to coordinate it all. Lately that work has centered on AI agents \u2014 not as magic, but as new teammates that need context, guardrails, and useful interfaces.",
+      "manifesto": "The best systems make people calmer and more capable. I care about software that clarifies work, removes pointless ceremony, and leaves a trace you can inspect when something goes sideways.",
+      "image": "",
+      "education": "BA, Management of Musical Enterprise \u2014 Baruch College"
+    },
+    "contact": {
+      "enabled": true,
+      "label": "08.",
+      "title": "Let\u2019s work together",
+      "body": "If you\u2019re building agentic workflows, internal tools, product operations, or just need someone who can make ambiguous technical work move, reach out.",
+      "primaryCta": {
+        "label": "Email Brad",
+        "href": "mailto:bszells@gmail.com"
+      },
+      "secondaryCta": {
+        "label": "GitHub",
+        "href": "https://github.com/bzellman"
+      }
+    },
+    "shipped": {
+      "enabled": true,
+      "label": "07.",
+      "title": "Fun Stuff",
+      "intro": "Smaller products, integrations, and utility projects \u2014 the practical things I build because they remove friction, scratch an itch, or make a workflow more fun.",
+      "items": [
+        {
+          "title": "earp-kit",
+          "subtitle": "Agentic SDLC framework",
+          "description": "A public framework for Claude Code skills, commands, workflows, and helper automation for agent-driven software delivery.",
+          "tags": [
+            "AI",
+            "SDLC",
+            "Developer tools"
+          ],
+          "href": "https://github.com/bzellman/earp-kit",
+          "image": ""
+        },
+        {
+          "title": "WindmillAC",
+          "subtitle": "Home Assistant integration",
+          "description": "A HACS integration that connects Windmill AC units into Home Assistant as climate entities.",
+          "tags": [
+            "Home Assistant",
+            "Python",
+            "IoT"
+          ],
+          "href": "https://github.com/bzellman/WindmillAC",
+          "image": ""
+        },
+        {
+          "title": "MagicCuts",
+          "subtitle": "Bluetooth proximity for iOS Shortcuts",
+          "description": "An iOS utility for discovering nearby Bluetooth devices and using signal strength inside Shortcut-driven automations.",
+          "tags": [
+            "iOS",
+            "Shortcuts",
+            "Privacy-first"
+          ],
+          "href": "/magiccuts.html",
+          "image": ""
+        },
+        {
+          "title": "Tidi",
+          "subtitle": "Mac download-folder cleanup",
+          "description": "A macOS app that helps keep Downloads and other folders organized with reminders, drag-and-drop movement, and quick destinations.",
+          "tags": [
+            "macOS",
+            "App Store",
+            "Productivity"
+          ],
+          "href": "/tidi.html",
+          "image": ""
+        },
+        {
+          "title": "Tables2",
+          "subtitle": "Google Docs tables to lists + JSON",
+          "description": "A Google Apps Script that turns structured tables in Docs into readable lists and machine-friendly JSON for Slack, email, or implementation handoff.",
+          "tags": [
+            "Apps Script",
+            "Workflow",
+            "JSON"
+          ],
+          "href": "/tables2.html",
+          "image": ""
+        },
+        {
+          "title": "Scordle",
+          "subtitle": "Social Wordle score sharing",
+          "description": "A lightweight product experiment for sharing Wordle scores with friends and groups without spamming every group chat.",
+          "tags": [
+            "iOS",
+            "Social",
+            "Game utility"
+          ],
+          "href": "/scordle.html",
+          "image": ""
+        }
+      ]
+    }
+  },
+  "sourceNotes": [
+    "Super Bowl research source: YugabyteDB article on Paramount+ Super Bowl live-stream architecture; user-provided role details used for Brad's contribution.",
+    "Showtime and Tradesy public context cross-checked against public reference pages; RED details combine public device/platform context with user-provided program scope."
+  ]
+}

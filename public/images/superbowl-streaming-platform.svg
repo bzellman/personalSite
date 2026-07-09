@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title>Super Bowl streaming platform</title><desc>Clean typographic mark for a Paramount Plus Super Bowl streaming readiness case study.</desc>
+<rect width="1200" height="760" fill="#0f1115"/>
+<circle cx="255" cy="270" r="118" fill="#2f80ff"/>
+<text x="255" y="304" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif" font-size="96" fill="#ffffff" letter-spacing="-6">P+</text>
+<text x="430" y="280" font-family="Arial Black, Helvetica, sans-serif" font-size="108" fill="#f7f7f2" letter-spacing="-6">SUPER</text>
+<text x="430" y="395" font-family="Arial Black, Helvetica, sans-serif" font-size="108" fill="#f7f7f2" letter-spacing="-6">BOWL</text>
+<path d="M150 505h900" stroke="#2f80ff" stroke-width="12"/>
+<text x="150" y="590" font-family="Geist Mono, Menlo, monospace" font-size="34" fill="#8d98a8" letter-spacing="4">LIVE STREAMING · SCALE · READINESS</text>
+</svg>

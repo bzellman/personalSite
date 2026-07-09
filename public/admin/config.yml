@@ -1,0 +1,200 @@
+backend:
+  name: github
+  repo: bzellman/personalSite
+  branch: master
+local_backend: true
+media_folder: "public/images"
+public_folder: "/images"
+publish_mode: editorial_workflow
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - file: "public/content/site.json"
+        name: "home"
+        label: "Homepage"
+        format: "json"
+        fields:
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Canonical URL", name: "canonical", widget: "string", required: false}
+              - {label: "Social Image", name: "image", widget: "image", required: false}
+          - label: "Site"
+            name: "site"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Short Name", name: "shortName", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Availability", name: "availability", widget: "text", required: false}
+              - label: "Social Links"
+                name: "socials"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "URL", name: "href", widget: "string"}
+              - label: "Navigation"
+                name: "nav"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Href", name: "href", widget: "string"}
+          - label: "Sections"
+            name: "sections"
+            widget: "object"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+                  - {label: "Headline", name: "headline", widget: "text"}
+                  - {label: "Subheadline", name: "subheadline", widget: "text"}
+                  - {label: "Body", name: "body", widget: "text"}
+                  - label: "Primary CTA"
+                    name: "primaryCta"
+                    widget: "object"
+                    fields: &ctaFields
+                      - {label: "Label", name: "label", widget: "string"}
+                      - {label: "Href", name: "href", widget: "string"}
+                  - label: "Secondary CTA"
+                    name: "secondaryCta"
+                    widget: "object"
+                    fields: *ctaFields
+                  - label: "Stats"
+                    name: "stats"
+                    widget: "list"
+                    fields:
+                      - {label: "Value", name: "value", widget: "string"}
+                      - {label: "Label", name: "label", widget: "string"}
+              - label: "Ticker"
+                name: "ticker"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Items", name: "items", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
+              - label: "Projects"
+                name: "projects"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+                  - label: "Project Items"
+                    name: "items"
+                    widget: "list"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Subtitle", name: "subtitle", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+                      - {label: "URL", name: "href", widget: "string", required: false}
+                      - {label: "Image", name: "image", widget: "image", required: false}
+                      - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+                      - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+              - label: "Fun Stuff"
+                name: "shipped"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+                  - label: "Fun Stuff Items"
+                    name: "items"
+                    widget: "list"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Subtitle", name: "subtitle", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+                      - {label: "URL", name: "href", widget: "string", required: false}
+                      - {label: "Image", name: "image", widget: "image", required: false}
+                      - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+                      - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+              - label: "Services"
+                name: "services"
+                widget: "object"
+                fields: &listSectionFields
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+              - label: "Process"
+                name: "process"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Subtitle", name: "subtitle", widget: "string"}
+                      - {label: "Description", name: "description", widget: "text"}
+              - label: "Experience"
+                name: "experience"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - {label: "Company", name: "company", widget: "string"}
+                      - {label: "Role", name: "role", widget: "string"}
+                      - {label: "Period", name: "period", widget: "string"}
+                      - {label: "Summary", name: "summary", widget: "text"}
+              - label: "About"
+                name: "about"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Headline", name: "headline", widget: "text"}
+                  - {label: "Body", name: "body", widget: "text"}
+                  - {label: "Manifesto", name: "manifesto", widget: "text"}
+                  - {label: "Image", name: "image", widget: "image", required: false}
+                  - {label: "Education", name: "education", widget: "string", required: false}
+              - label: "Contact"
+                name: "contact"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+                  - label: "Primary CTA"
+                    name: "primaryCta"
+                    widget: "object"
+                    fields: *ctaFields
+                  - label: "Secondary CTA"
+                    name: "secondaryCta"
+                    widget: "object"
+                    fields: *ctaFields
+          - label: "Source Notes"
+            name: "sourceNotes"
+            widget: "list"
+            required: false
+            field: {label: "Note", name: "note", widget: "text"}
