@@ -1,38 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Scale comparison for Project Panama</title>
   <desc id="desc">A chart comparing Google Books, Internet Archive, pirated downloads, and the redacted print-scan range from Project Panama.</desc>
   <rect width="1200" height="630" fill="#f4f1eb"/>
   <rect x="0" y="0" width="8" height="630" fill="#2f80ff"/>
-  <text x="64" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#242424">Intact copies were an option</text>
+  <text x="64" y="92" font-family="Georgia, Times, serif" font-size="42" font-weight="700" fill="#242424">Intact copies were an option</text>
   <text x="64" y="136" font-family="system-ui, sans-serif" font-size="20" fill="#696969">Project Panama against scan programs that left the book on the shelf</text>
-
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#242424">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="16" fill="#242424">
     <text x="64" y="210">Google Books</text>
     <text x="1040" y="210" text-anchor="end">40M+</text>
     <rect x="64" y="222" width="1072" height="18" fill="#d9d4cb"/>
     <rect x="64" y="222" width="1072" height="18" fill="#2f80ff"/>
-
     <text x="64" y="280">Internet Archive digitized</text>
     <text x="1040" y="280" text-anchor="end">25M+</text>
     <rect x="64" y="292" width="1072" height="18" fill="#d9d4cb"/>
     <rect x="64" y="292" width="670" height="18" fill="#3d3d3d"/>
-
     <text x="64" y="350">Pirated downloads (floor)</text>
     <text x="1040" y="350" text-anchor="end">7M+</text>
     <rect x="64" y="362" width="1072" height="18" fill="#d9d4cb"/>
     <rect x="64" y="362" width="187" height="18" fill="#8a6a3c"/>
-
     <text x="64" y="420">Panama vendor window</text>
-    <text x="1040" y="420" text-anchor="end">0.52M</text>
+    <text x="1040" y="420" text-anchor="end">0.5-2M</text>
     <rect x="64" y="432" width="1072" height="18" fill="#d9d4cb"/>
     <rect x="64" y="432" width="13" height="18" fill="#c45c26"/>
     <rect x="77" y="432" width="41" height="18" fill="#c45c26" opacity="0.45"/>
-
     <text x="64" y="490">Settlement works list</text>
     <text x="1040" y="490" text-anchor="end">482,460</text>
     <rect x="64" y="502" width="1072" height="18" fill="#d9d4cb"/>
     <rect x="64" y="502" width="13" height="18" fill="#242424"/>
   </g>
-
   <text x="64" y="574" font-family="system-ui, sans-serif" font-size="15" fill="#696969">Purchased-print total: millions (court). Exact figure redacted. The $1.5B paid the piracy path, not the paper.</text>
 </svg>

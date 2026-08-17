@@ -52,6 +52,8 @@ function renderFooter(data) {
 function renderRecord(feature, sources) {
   const r = feature.record;
   return `<section class="chapter is-on" id="chapter-record" role="tabpanel" data-chapter="record">
+    <p class="chapter-lede">${esc(feature.dek)}</p>
+    <p class="honesty">${esc(feature.honesty)}</p>
     <p class="chapter-lede">${esc(r.lede)}</p>
     ${(feature.quotes || []).map(q => `<blockquote class="pull"><p>${esc(q.text)}</p>${cites(q.sourceIds, sources)}</blockquote>`).join('')}
     <div class="beat-list">
@@ -76,9 +78,11 @@ function rangeStyle(item, max) {
 
 function renderBar(item, max, sources) {
   const kind = item.kind === 'range' ? 'range' : item.kind === 'redacted' ? 'redacted' : item.group;
-  const fill = item.kind === 'range'
-    ? `<span class="bar-fill range" style="${rangeStyle(item, max)}"></span>`
-    : `<span class="bar-fill ${attr(kind)}" style="width:${barWidth(item, max)}%"></span>`;
+  const fill = item.kind === 'redacted'
+    ? `<span class="bar-unknown">exact total redacted</span>`
+    : item.kind === 'range'
+      ? `<span class="bar-fill range" style="${rangeStyle(item, max)}"></span>`
+      : `<span class="bar-fill ${attr(kind)}" style="width:${barWidth(item, max)}%"></span>`;
   return `<button class="bar-row" type="button" data-bar="${attr(item.id)}" aria-expanded="false">
     <span class="bar-label">${esc(item.label)}</span>
     <span class="bar-track" aria-hidden="true">${fill}</span>
@@ -105,10 +109,6 @@ function renderScale(feature, sources) {
   const view = SCALE_VIEWS.scans;
   const rows = view.ids.map(id => comparators[id]).filter(Boolean);
   return `<section class="chapter" id="chapter-scale" role="tabpanel" data-chapter="scale" hidden>
-    <p class="chapter-lede">${esc(feature.scale.intro)}</p>
-    <div class="loss-grid">
-      ${(feature.scale.losses || []).map(l => `<article class="loss"><h3>${esc(l.title)}</h3><p>${esc(l.body)}</p>${cites(l.sourceIds, sources)}</article>`).join('')}
-    </div>
     <div class="scale-toolbar" role="group" aria-label="Comparison set">
       <span>Compare</span>
       ${Object.entries(SCALE_VIEWS).map(([id, v], i) => `<button class="chip" type="button" data-scale-view="${id}" aria-pressed="${i === 0 ? 'true' : 'false'}">${esc(v.label)}</button>`).join('')}
@@ -116,11 +116,26 @@ function renderScale(feature, sources) {
     <div class="chart" data-chart>
       ${rows.map(item => renderBar(item, view.max, sources)).join('')}
     </div>
+    <div class="loss-grid">
+      ${(feature.scale.losses || []).map(l => `<article class="loss"><h3>${esc(l.title)}</h3><p>${esc(l.body)}</p>${cites(l.sourceIds, sources)}</article>`).join('')}
+    </div>
+    <p class="chapter-lede">${esc(feature.scale.intro)}</p>
     <p class="chapter-lede">${esc(feature.scale.throughput.intro)}</p>
     <div class="throughput">
       ${feature.scale.throughput.rows.map(row => `<article class="t-row"><div><strong>${esc(row.label)}</strong><span class="num">${esc(row.display)}</span></div><p>${esc(row.detail)}</p>${cites(row.sourceIds, sources)}</article>`).join('')}
     </div>
   </section>`;
+}
+
+function firstSentence(text = '') {
+  const match = String(text).trim().match(/^[^.!?]+[.!?]/);
+  return match ? match[0] : String(text);
+}
+
+function pathDetailHtml(path, criteria, sources) {
+  return `<h3>${esc(path.label)}</h3>
+    <dl class="path-dl">${criteria.map(c => `<div><dt>${esc(c.label)}</dt><dd>${esc(path.cells[c.id])}</dd></div>`).join('')}</dl>
+    ${cites(path.sourceIds, sources)}`;
 }
 
 function renderAlternatives(feature, sources) {
@@ -139,15 +154,13 @@ function renderAlternatives(feature, sources) {
         <tbody>
           ${a.criteria.map(c => `<tr>
             <th scope="row" class="stub">${esc(c.label)}</th>
-            ${a.paths.map(p => `<td data-path="${attr(p.id)}" class="${p.highlight ? 'hl is-on' : ''}">${esc(p.cells[c.id])}</td>`).join('')}
+            ${a.paths.map(p => `<td data-path="${attr(p.id)}" class="${p.highlight ? 'hl is-on' : ''}">${esc(firstSentence(p.cells[c.id]))}</td>`).join('')}
           </tr>`).join('')}
         </tbody>
       </table>
     </div>
     <aside class="path-detail" data-path-detail>
-      <h3>${esc(first.label)}</h3>
-      <p>${esc(Object.values(first.cells).join(' '))}</p>
-      ${cites(first.sourceIds, sources)}
+      ${pathDetailHtml(first, a.criteria, sources)}
     </aside>
   </section>`;
 }
@@ -181,9 +194,7 @@ function renderFeature(feature) {
   return `<article class="feature">
     <header class="feature-hero">
       <h1>${esc(feature.headline)}</h1>
-      <p class="feature-dek">${esc(feature.dek)}</p>
       <p class="feature-meta"><span>Brad Zellman</span><span>Updated ${esc(updatedLabel)}</span><span>Bartz v. Anthropic</span></p>
-      <p class="honesty">${esc(feature.honesty)}</p>
     </header>
     <nav class="feature-chapters" aria-label="Feature sections">
       <div class="feature-chapters-inner" role="tablist">
@@ -200,7 +211,7 @@ function renderFeature(feature) {
   </article>`;
 }
 
-function showChapter(id) {
+function showChapter(id, { scroll = true } = {}) {
   const tabs = [...document.querySelectorAll('[role="tab"][data-chapter]')];
   const panels = [...document.querySelectorAll('[data-chapter].chapter')];
   tabs.forEach(tab => {
@@ -214,6 +225,13 @@ function showChapter(id) {
   });
   if (location.hash.replace('#', '') !== id) {
     history.replaceState(null, '', `#${id}`);
+  }
+  const bar = document.querySelector('.feature-chapters');
+  if (scroll && bar) {
+    const top = bar.getBoundingClientRect().top + window.scrollY - 80;
+    if (Math.abs(window.scrollY - top) > 8) {
+      window.scrollTo({ top: Math.max(0, top), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }
   }
 }
 
@@ -242,7 +260,7 @@ function bindChapters(feature) {
     }
   });
   const fromHash = location.hash.replace('#', '');
-  showChapter(ids.includes(fromHash) ? fromHash : ids[0]);
+  showChapter(ids.includes(fromHash) ? fromHash : ids[0], { scroll: ids.includes(fromHash) });
   window.addEventListener('hashchange', () => {
     const id = location.hash.replace('#', '');
     if (ids.includes(id)) showChapter(id);
@@ -295,7 +313,7 @@ function bindAlternatives(feature) {
     const path = paths[id];
     if (!path) return;
     table.querySelectorAll('[data-path]').forEach(el => el.classList.toggle('is-on', el.dataset.path === id));
-    detail.innerHTML = `<h3>${esc(path.label)}</h3><p>${esc(Object.values(path.cells).join(' '))}</p>${cites(path.sourceIds, sources)}`;
+    detail.innerHTML = pathDetailHtml(path, feature.alternatives.criteria, sources);
   };
 
   table.addEventListener('click', event => {
