@@ -136,6 +136,46 @@ button, input, textarea { font: inherit; }
 .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: 1rem; }
 .tags span { border: 1px solid var(--line-dark); color: var(--ink-soft); padding: .35rem .5rem; font-family: "Geist Mono", monospace; font-size: .74rem; }
 
+.feature-list { margin-top: clamp(3rem, 5vw, 4rem); display: grid; gap: .55rem; }
+.feature-entry {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  background: #111;
+  color: var(--ink-inverse);
+  min-height: 28rem;
+}
+.feature-entry-copy {
+  padding: clamp(1.8rem, 4vw, 3.6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.1rem;
+}
+.feature-entry h3 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+  line-height: .9;
+  letter-spacing: -.07em;
+}
+.feature-entry p {
+  margin: 0;
+  max-width: 38rem;
+  color: #cfcfcf;
+  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+  line-height: 1.45;
+}
+.feature-entry-cta { font-weight: 800; letter-spacing: -.04em; color: #fff; }
+.feature-entry:hover .feature-entry-cta { color: var(--accent); }
+.feature-entry-visual {
+  background: var(--surface);
+  min-height: 16rem;
+}
+.feature-entry-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .service-list { margin-top: clamp(3rem, 5vw, 4rem); border-top: 1px solid var(--line-dark); }
 .service-row { display: grid; grid-template-columns: 8rem 1fr 1.4fr; gap: 2rem; align-items: start; padding: clamp(1.5rem, 3vw, 2.4rem) 0; border-bottom: 1px solid var(--line-dark); }
 .service-row .num { color: var(--accent); font-weight: 800; font-family: "Geist Mono", monospace; }
@@ -189,6 +229,7 @@ button, input, textarea { font: inherit; }
   .project-grid, .process-grid { grid-template-columns: 1fr; }
   .project-card.featured { grid-column: auto; grid-template-columns: 1fr; }
   .project-card.featured .project-image { min-height: 280px; }
+  .feature-entry { grid-template-columns: 1fr; }
   .service-row { grid-template-columns: 1fr; gap: .75rem; }
   .timeline-item { grid-template-columns: 1fr; }
   .about-card { grid-template-columns: 1fr; }

@@ -1,0 +1,522 @@
+{
+  "meta": {
+    "title": "Intact copies were an option — Project Panama — Brad Zellman",
+    "description": "Court records in Bartz v. Anthropic show how Claude’s maker built a private book library: pirate caches first, then millions of purchased print books discarded after scanning. Other digitization programs had already solved this without destroying the object. This page keeps the numbers, the citations, and the gaps.",
+    "canonical": "https://bradzellman.com/panama.html",
+    "image": "/images/panama-scale.svg"
+  },
+  "headline": "Intact copies were an option",
+  "dek": "Project Panama was Anthropic’s internal plan to destructively scan all the books in the world. The company already employed the person who had helped scan more than 40 million books without destroying them. The public filings show which method they chose, what the $1.5 billion settlement actually paid for, and which losses it did not.",
+  "updated": "2026-08-17",
+  "honesty": "The exact count of purchased-and-scanned print books is redacted in the public filings. This page uses the court’s own words (“millions”), a vendor range that is public, and named comparators. It does not invent a headcount, and it does not treat “less common” as proof that rare or antiquarian copies were destroyed.",
+  "chapters": [
+    { "id": "record", "label": "The record" },
+    { "id": "scale", "label": "Scale" },
+    { "id": "alternatives", "label": "Alternatives" },
+    { "id": "split", "label": "The split" },
+    { "id": "sources", "label": "Sources" }
+  ],
+  "quotes": [
+    {
+      "text": "Project Panama is our effort to destructively scan all the books in the world.",
+      "sourceIds": ["wapo-2026", "snopes-2026"]
+    },
+    {
+      "text": "We don’t want it to be known that we are working on this.",
+      "sourceIds": ["wapo-2026", "snopes-2026"]
+    }
+  ],
+  "record": {
+    "lede": "In Bartz v. Anthropic, U.S. District Judge William Alsup described two acquisition paths that fed a central “research library” Anthropic intended to keep forever. One path was piracy. The other was purchase, followed by a format change that destroyed the paper copy.",
+    "beats": [
+      {
+        "title": "Pirate caches, then a print operation",
+        "body": "In 2021 Anthropic downloaded Books3 (196,640 books) and at least five million copies from Library Genesis. In 2022 it downloaded at least two million copies from the Pirate Library Mirror. The court counted that as more than seven million pirated copies. In February 2024 it hired Tom Turvey, previously a Google executive who helped create Google Books, and tasked him with obtaining “all the books in the world” while still avoiding as much “legal/practice/business slog” as possible — CEO Dario Amodei’s phrase, quoted in the fair-use order.",
+        "sourceIds": ["alsup-order"]
+      },
+      {
+        "title": "Licensing talks withered. Bulk print did not.",
+        "body": "Turvey emailed major publishers about licensing books for training, then let those conversations wither. The court notes that another major technology company soon did reach a publisher license. Anthropic instead emailed distributors and retailers about bulk print purchases for a “research library,” spent many millions of dollars, and bought millions of print books, often used. Service providers stripped the bindings, cut pages to size, scanned them, and discarded the paper originals. Each print book became a PDF with page images and machine-readable text.",
+        "sourceIds": ["alsup-order", "wapo-2026"]
+      },
+      {
+        "title": "Why books",
+        "body": "Anthropic treated books as the cost-effective way to a world-class model. Internal language reported in the coverage, and the court’s account of the training mixes, point to the same motive: professionally edited prose — “good writing” of the kind “an editor would approve of” — including work that predates the modern web. Reporting on the unsealed files also ties the print push to concern about model collapse, the degradation that can follow when models train on their own output. That is the relevance of what was taken: not that every discarded copy was a unique first edition (the record does not show that), but that Anthropic valued these texts as scarce, high-quality human writing and then converted the durable object into a private file.",
+        "sourceIds": ["alsup-order", "euronews-2026", "wapo-2026"]
+      },
+      {
+        "title": "A private library, retained after training",
+        "body": "Scanned and pirated files went into a general research library. Engineers copied subsets into training mixes. Anthropic planned to “store everything forever”; the court quotes the internal line that there was “no compelling reason to delete a book,” even if it would never be used for training again. Authors did not allege that Claude outputted their books to users. The legal fight was about the library and the copies made to build it.",
+        "sourceIds": ["alsup-order"]
+      }
+    ],
+    "unknowns": [
+      {
+        "title": "How many print books were purchased and scanned",
+        "body": "The court says “millions of print books” and “many millions of dollars.” The Washington Post reported that the ultimate scanned count and cost are redacted. A vendor proposal that the Post says ultimately worked with Anthropic described a request to convert 500,000 to two million books over six months. An October 2024 internal memo, as described by Snopes, already put purchases in the millions — the leading digits redacted, the magnitude visible.",
+        "sourceIds": ["alsup-order", "wapo-2026", "snopes-2026"]
+      },
+      {
+        "title": "Whether rare or antiquarian copies were destroyed",
+        "body": "Turvey told Wonder Book that “less common books are a great place to start.” A Project Panama categorization example linked to a BISG heading that includes antiques and collectibles; Snopes notes it is unclear whether that meant targeting antique books or books about antiques. Anthropic told Snopes it does not buy and destroy “rare” or “antiquarian” books, distinguishing collectibles from harder-to-find professional and reference titles. This page does not collapse those categories.",
+        "sourceIds": ["snopes-2026"]
+      },
+      {
+        "title": "What inscriptions, annotations, or unique physical traits went with the paper",
+        "body": "Used books can carry owner marks, library stamps, and other copy-specific information. The public filings describe industrial cutting, high-speed scanning, and recycling pickup. They do not inventory copy-level uniqueness. The honest claim is narrower: the objects were discarded after a one-for-one digital replacement that never left Anthropic.",
+        "sourceIds": ["alsup-order", "wapo-2026"]
+      }
+    ]
+  },
+  "scale": {
+    "intro": "“Millions” is both a legal fact and a visualization problem. The pirated downloads have floors. The print operation does not, in public. The useful comparison is not a fake precise total. It is what still exists elsewhere, what got paid, and what kind of loss each pile represents.",
+    "losses": [
+      {
+        "id": "object",
+        "title": "The object",
+        "body": "Bindings were stripped, pages cut, paper discarded. A print book that can last decades or centuries in ordinary storage became pulp after a scan that, in Alsup’s framing, replaced that copy inside Anthropic and did not create a circulating extra copy. The digital file is not a public facsimile. It is a private library entry.",
+        "sourceIds": ["alsup-order", "wapo-2026"]
+      },
+      {
+        "id": "stream",
+        "title": "The used-book stream",
+        "body": "Purchases ran through used-book channels including Better World Books and World of Books, in batches of tens of thousands. Those copies are not on a retail shelf, not in a library discard pile waiting for a reader, and not in the donation stream those sellers also operate. Better World Books has separately reported donating more than 35 million books and reusing or recycling more than 447 million. This page does not claim Anthropic’s orders subtracted from those donation totals dollar-for-dollar. It does claim the copies they bought are gone as physical books.",
+        "sourceIds": ["wapo-2026", "bwb-2023"]
+      },
+      {
+        "id": "access",
+        "title": "Who can read the scan",
+        "body": "Google Books, HathiTrust, and Internet Archive scans — with all their copyright limits and legal fights — were built so someone other than the scanner could search or read. Anthropic’s print-sourced PDFs stayed inside the company. The court states the record does not show those converted copies going to anyone outside Anthropic.",
+        "sourceIds": ["alsup-order", "authors-guild-google", "hathitrust-collection"]
+      },
+      {
+        "id": "settlement",
+        "title": "What the settlement did not restore",
+        "body": "The $1.5 billion class settlement, given final approval on 20 July 2026, covers a works list of 482,460 books found in the LibGen or PiLiMi versions Anthropic downloaded — about $3,000 per work before fees. It is the piracy path. Alsup had already held that training on copyrighted books can be fair use, and that digitizing purchased print copies for a one-for-one library replacement can be fair use. Destroyed paper was not what the check bought back.",
+        "sourceIds": ["pearl-cohen-2026", "ap-2026", "techcrunch-2026", "alsup-order"]
+      }
+    ],
+    "comparators": [
+      {
+        "id": "panama-vendor",
+        "label": "Vendor 6-month window",
+        "display": "500,000–2,000,000",
+        "value": 2000000,
+        "rangeLow": 500000,
+        "kind": "range",
+        "group": "panama-print",
+        "note": "Proposal by a scanning vendor that, per the Post, ultimately worked with Anthropic. Not a confirmed final headcount.",
+        "sourceIds": ["wapo-2026"]
+      },
+      {
+        "id": "panama-court",
+        "label": "Purchased print books (court)",
+        "display": "millions",
+        "value": null,
+        "kind": "redacted",
+        "group": "panama-print",
+        "note": "Alsup: Anthropic “spent many millions of dollars to purchase millions of print books.” Exact total redacted in the documents the Post reviewed.",
+        "sourceIds": ["alsup-order", "wapo-2026"]
+      },
+      {
+        "id": "books3",
+        "label": "Books3 download",
+        "display": "196,640",
+        "value": 196640,
+        "kind": "count",
+        "group": "pirated",
+        "note": "Downloaded by cofounder Ben Mann in January or February 2021. The court states he knew the books were unauthorized copies.",
+        "sourceIds": ["alsup-order"]
+      },
+      {
+        "id": "libgen",
+        "label": "LibGen download",
+        "display": "at least 5,000,000",
+        "value": 5000000,
+        "kind": "floor",
+        "group": "pirated",
+        "note": "June 2021. Floor, not a ceiling.",
+        "sourceIds": ["alsup-order"]
+      },
+      {
+        "id": "pilimi",
+        "label": "PiLiMi download",
+        "display": "at least 2,000,000",
+        "value": 2000000,
+        "kind": "floor",
+        "group": "pirated",
+        "note": "July 2022. Floor, not a ceiling.",
+        "sourceIds": ["alsup-order"]
+      },
+      {
+        "id": "pirated-total",
+        "label": "Pirated copies, court total",
+        "display": "more than 7,000,000",
+        "value": 7000000,
+        "kind": "floor",
+        "group": "pirated",
+        "note": "Alsup’s combined count from Books3, LibGen, and PiLiMi. Digital files. The physical books those files came from were not Anthropic’s to destroy.",
+        "sourceIds": ["alsup-order"]
+      },
+      {
+        "id": "settlement-class",
+        "label": "Settlement works list",
+        "display": "482,460",
+        "value": 482460,
+        "kind": "count",
+        "group": "money",
+        "note": "Certified class: copyright owners of books on the LibGen/PiLiMi works list with an ISBN or ASIN and a timely U.S. registration. Subset of the pirated downloads, not of the shredded print.",
+        "sourceIds": ["pearl-cohen-2026", "ap-2026"]
+      },
+      {
+        "id": "google-books",
+        "label": "Google Books scanned",
+        "display": "more than 40,000,000",
+        "value": 40000000,
+        "kind": "floor",
+        "group": "intact",
+        "note": "Turvey’s March 2025 declaration: the project he helped create “has scanned over 40 million books over the years.” Library partners got the physical books back.",
+        "sourceIds": ["turvey-decl"]
+      },
+      {
+        "id": "hathitrust",
+        "label": "HathiTrust volumes",
+        "display": "more than 18,000,000",
+        "value": 18000000,
+        "kind": "floor",
+        "group": "intact",
+        "note": "September 2024: more than 18 million volumes, including 6.7 million in the U.S. public domain. Member libraries still hold print.",
+        "sourceIds": ["hathitrust-wp"]
+      },
+      {
+        "id": "ia-digitized",
+        "label": "Internet Archive books digitized",
+        "display": "more than 25,000,000",
+        "value": 25000000,
+        "kind": "floor",
+        "group": "intact",
+        "note": "Internet Archive Digitization Services: “preserving more than 25 million books” since 2006, using non-destructive Scribe workstations.",
+        "sourceIds": ["ia-about"]
+      },
+      {
+        "id": "loc-books",
+        "label": "Library of Congress cataloged books",
+        "display": "more than 25,770,000",
+        "value": 25770000,
+        "kind": "floor",
+        "group": "intact",
+        "note": "LoC general information: more than 25.77 million cataloged books in the LC classification system, inside a collection of more than 178.2 million items. These copies still exist.",
+        "sourceIds": ["loc-general"]
+      },
+      {
+        "id": "us-public-print",
+        "label": "U.S. public library print holdings",
+        "display": "686,900,000",
+        "value": 686900000,
+        "kind": "count",
+        "group": "intact",
+        "note": "IMLS Public Libraries Survey, FY 2019: 686.9 million print materials. National stock, not unique titles. Shown so “millions destroyed” can be read against a public collection that remains.",
+        "sourceIds": ["imls-2019"]
+      }
+    ],
+    "throughput": {
+      "intro": "Speed is the usual defense of the hydraulic cutter. The public numbers do not make destruction the only fast path. They do make it the path that converts time saved into objects lost.",
+      "rows": [
+        {
+          "label": "Panama vendor proposal",
+          "display": "500,000–2,000,000 books in 6 months",
+          "detail": "About 2,700 to 11,000 books per day if spread evenly across 180 days. Derived from the Post’s account of the vendor proposal, not from a confirmed production log.",
+          "sourceIds": ["wapo-2026"]
+        },
+        {
+          "label": "Internet Archive, reported daily rate",
+          "display": "about 3,500 books a day",
+          "detail": "Open Culture, February 2021, citing Internet Archive operations across digitization centers. Books remain intact. A 10-Scribe center on one shift is documented at about 500 monographs a week.",
+          "sourceIds": ["openculture-2021", "ia-process"]
+        },
+        {
+          "label": "Google Books origin story",
+          "display": "40 minutes to turn 300 pages by hand",
+          "detail": "Google’s own history: Larry Page and Marissa Mayer timed a 300-page book with a metronome before the company built gentler high-speed scanning. The later industrial system was designed so library books could be returned.",
+          "sourceIds": ["google-books-history"]
+        }
+      ]
+    }
+  },
+  "alternatives": {
+    "intro": "These are not hypotheticals invented after the fact. Several were running at scale before Project Panama. One of them was Turvey’s previous life’s work. The comparison is method, access, and what Anthropic actually did — not a claim that licensing the whole world of books was cheap or easy. Turvey swore that it was not.",
+    "criteria": [
+      { "id": "object", "label": "Fate of the physical book" },
+      { "id": "access", "label": "Who can use the digital copy" },
+      { "id": "legal", "label": "Legal posture in the public record" },
+      { "id": "scale", "label": "Demonstrated scale" },
+      { "id": "anthropic", "label": "What Anthropic did" }
+    ],
+    "paths": [
+      {
+        "id": "panama",
+        "label": "Destructive scan",
+        "short": "Panama",
+        "highlight": true,
+        "cells": {
+          "object": "Destroyed. Spines cut; pages scanned on high-speed equipment; recycling pickup for the remainder.",
+          "access": "Private. Court: no showing that converted print copies left Anthropic.",
+          "legal": "Alsup: fair use as a one-for-one library format change for books Anthropic purchased. Not the issue the $1.5B settlement paid.",
+          "scale": "Court: millions of print books. Vendor proposal: 500,000–2,000,000 in six months. Final total redacted.",
+          "anthropic": "Chose this path in 2024 after hiring the former Google Books partnerships lead."
+        },
+        "sourceIds": ["alsup-order", "wapo-2026"]
+      },
+      {
+        "id": "google-books",
+        "label": "Library partnership scan",
+        "short": "Google Books",
+        "highlight": false,
+        "cells": {
+          "object": "Returned to the lending library. Google developed non-destructive capture so bound volumes did not have to be disbound.",
+          "access": "Public search; snippet or limited view for in-copyright works; full view for public domain. Partner libraries received digital copies.",
+          "legal": "Authors Guild v. Google, 804 F.3d 202 (2d Cir. 2015): scanning for a search corpus held to be fair use. Separate from Anthropic’s case.",
+          "scale": "Turvey: over 40 million books scanned across the life of the project.",
+          "anthropic": "Hired Turvey from this world, then did not use this method for Panama."
+        },
+        "sourceIds": ["turvey-decl", "authors-guild-google", "google-books-history"]
+      },
+      {
+        "id": "scribe",
+        "label": "Preservation scan",
+        "short": "Internet Archive",
+        "highlight": false,
+        "cells": {
+          "object": "Survives. Scribe workstations use a V-cradle, glass platen, and two cameras. Internet Archive calls the service non-destructive.",
+          "access": "Public for public-domain texts; controlled digital lending for some in-copyright works, which publishers have separately sued over (Hachette v. Internet Archive). That fight is about lending, not about destroying the book.",
+          "legal": "Digitization method is not the Panama issue. CDL remains contested. Do not treat Archive practice as a free legal shield for training.",
+          "scale": "More than 25 million books digitized since 2006, per Archive digitization services. About 3,500 books a day reported in 2021.",
+          "anthropic": "Available as a method. Not the method in the vendor proposal the Post describes."
+        },
+        "sourceIds": ["ia-digitization", "ia-about", "openculture-2021"]
+      },
+      {
+        "id": "hathitrust",
+        "label": "Shared library repository",
+        "short": "HathiTrust",
+        "highlight": false,
+        "cells": {
+          "object": "Print stays with member libraries. Digital files are a shared preservation corpus.",
+          "access": "Full-text search across the collection; reading access follows copyright status. 6.7 million volumes in the U.S. public domain as of September 2024.",
+          "legal": "Authors Guild v. HathiTrust, 755 F.3d 87 (2d Cir. 2014): search, preservation, and accessibility copies held to be fair use.",
+          "scale": "More than 18 million volumes as of September 2024.",
+          "anthropic": "A library-side outcome of the Google-era scans. Anthropic’s library is not this."
+        },
+        "sourceIds": ["hathitrust-wp", "hathitrust-case"]
+      },
+      {
+        "id": "license",
+        "label": "Publisher license",
+        "short": "Licensing",
+        "highlight": false,
+        "cells": {
+          "object": "Untouched. The license is to a file, not a disbound remainder.",
+          "access": "Whatever the contract says. Not a public library.",
+          "legal": "Clean if the licensor actually holds the rights. Turvey said he was unwilling to trust some third-party aggregators on that point.",
+          "scale": "Turvey: no viable market at the scale of Anthropic’s “complete needs.” He cited a reported HarperCollins backlist nonfiction offer at $5,000 per book for three years, opt-in by author, and said he would be shocked if any LLM company licensed a significant number of books at those prices.",
+          "anthropic": "Turvey had many publisher conversations in his first months. As of his 27 March 2025 declaration, Anthropic had not entered a deal to acquire electronic book datasets. The court says those conversations withered; another major tech company soon licensed with a publisher."
+        },
+        "sourceIds": ["turvey-decl", "alsup-order", "verge-harpercollins"]
+      },
+      {
+        "id": "piracy",
+        "label": "Shadow libraries",
+        "short": "LibGen / PiLiMi",
+        "highlight": false,
+        "cells": {
+          "object": "Not Anthropic’s to destroy. These were already digital pirate copies.",
+          "access": "Originally illicit public caches. Anthropic kept its downloads in a private library.",
+          "legal": "Alsup: no fair-use entitlement to build a permanent general-purpose library from pirated copies. That is the claim that settled for $1.5 billion rather than going to a jury.",
+          "scale": "More than 7 million copies across Books3, LibGen, and PiLiMi. Settlement class: 482,460 works that met registration and identifier rules.",
+          "anthropic": "This was the first path. Amodei preferred it to “legal/practice/business slog.” The company later became “not so gung ho” for legal reasons and kept the files anyway."
+        },
+        "sourceIds": ["alsup-order", "pearl-cohen-2026"]
+      },
+      {
+        "id": "write",
+        "label": "Commission writing",
+        "short": "Pay writers",
+        "highlight": false,
+        "cells": {
+          "object": "None taken.",
+          "access": "Anthropic would own or license what it paid to create.",
+          "legal": "Clean, assuming work-for-hire or an express license.",
+          "scale": "The court says Anthropic could have trained without these books, at higher cost: staff writers, engineers to revise bad exemplars, more compute. It does not price that alternative.",
+          "anthropic": "Acknowledged as possible. Not chosen. Canonical published books were treated as the cheaper route to “good writing.”"
+        },
+        "sourceIds": ["alsup-order"]
+      }
+    ]
+  },
+  "split": {
+    "intro": "Most coverage flattens Panama, piracy, fair use, and the settlement into one morality play. The docket splits them. Honesty means keeping the split visible, including where Anthropic won.",
+    "columns": [
+      {
+        "id": "pirated",
+        "title": "Pirated digital copies",
+        "items": [
+          "Source: Books3, LibGen, PiLiMi.",
+          "Volume: more than 7 million copies (court floors).",
+          "Physical books: not destroyed by Anthropic in this path.",
+          "Alsup: storing them in a permanent general-purpose library was not excused as fair use.",
+          "Outcome: class settlement, $1.5 billion, 482,460 works, roughly $3,000 a work before fees. Final approval 20 July 2026 by Judge Araceli Martínez-Olguín after Alsup’s retirement.",
+          "Statutory backdrop the settlement avoided: up to $150,000 per work if a jury found willful infringement, as Bloomberg Law reported."
+        ],
+        "sourceIds": ["alsup-order", "pearl-cohen-2026", "bloomberg-2026"]
+      },
+      {
+        "id": "purchased",
+        "title": "Purchased print copies",
+        "items": [
+          "Source: bulk used and new print, including Better World Books and World of Books.",
+          "Volume: millions (court). Exact figure redacted.",
+          "Physical books: discarded after scanning.",
+          "Alsup: the format change for purchased copies was fair use because it replaced the print copy Anthropic had bought, without adding circulating copies.",
+          "Alsup, separately: using books to train Claude was “exceedingly transformative” and fair use.",
+          "Outcome of those holdings: intact. Anthropic deputy general counsel Aparna Sridhar told the Post the June 2025 ruling “remains intact”; the settlement was about how some materials were acquired."
+        ],
+        "sourceIds": ["alsup-order", "wapo-2026", "euronews-2026"]
+      }
+    ],
+    "closing": "Read the two columns together. The destroyed books are the part the money did not touch. The pirated files are the part the money did. The training use itself was held to be fair use in this district court. That holding was not appealed to a circuit in this case, because the rest settled. TechCrunch’s account of the approval is right to flag that: one district decision, no appellate precedent from Bartz."
+  },
+  "sources": [
+    {
+      "id": "alsup-order",
+      "label": "Bartz v. Anthropic PBC, Order on Fair Use",
+      "detail": "No. C 24-05417 WHA (N.D. Cal. June 23, 2025) (Alsup, J.).",
+      "url": "https://admin.bakerlaw.com/wp-content/uploads/2025/07/ECF-231-Order-on-Fair-Use.pdf"
+    },
+    {
+      "id": "turvey-decl",
+      "label": "Declaration of Tom Turvey",
+      "detail": "Dkt. 127, Bartz v. Anthropic PBC, filed March 27, 2025.",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.127.0.pdf"
+    },
+    {
+      "id": "wapo-2026",
+      "label": "The Washington Post",
+      "detail": "Martine Powers et al., “Anthropic ‘destructively’ scanned millions of books to build Claude,” January 27, 2026.",
+      "url": "https://www.washingtonpost.com/technology/2026/01/27/anthropic-ai-scan-destroy-books/"
+    },
+    {
+      "id": "euronews-2026",
+      "label": "Euronews",
+      "detail": "“Project Panama: How Anthropic secretly destroyed millions of books to train its AI,” August 5, 2026.",
+      "url": "https://www.euronews.com/culture/2026/08/05/project-panama-how-anthropic-secretly-destroyed-millions-of-books-to-train-its-ai"
+    },
+    {
+      "id": "snopes-2026",
+      "label": "Snopes",
+      "detail": "Anna Rascouët-Paz, “Are AI companies scanning and destroying millions of books, including rare titles?,” August 3, 2026. Rating: Mostly True; rarity undetermined.",
+      "url": "https://www.snopes.com/fact-check/ai-companies-destroying-rare-books/"
+    },
+    {
+      "id": "pearl-cohen-2026",
+      "label": "Pearl Cohen summary of final approval",
+      "detail": "Final approval July 20, 2026; works list of 482,460; estimated ~$3,000 per work; fees $101,561,111.",
+      "url": "https://www.pearlcohen.com/federal-court-approves-1-5-billion-anthropic-copyright-settlement-largest-in-history/"
+    },
+    {
+      "id": "ap-2026",
+      "label": "Associated Press",
+      "detail": "“Judge approves a $1.5B Anthropic settlement over books used to train Claude.” Notes ~91% of more than 482,000 books claimed.",
+      "url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63"
+    },
+    {
+      "id": "techcrunch-2026",
+      "label": "TechCrunch",
+      "detail": "“Anthropic’s landmark $1.5B copyright settlement is approved,” July 20, 2026. Notes the fair-use holding was not taken up on appeal.",
+      "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+    },
+    {
+      "id": "bloomberg-2026",
+      "label": "Bloomberg Law",
+      "detail": "“Anthropic, Authors’ $1.5 Billion Deal Earns Final Approval.” Reports ~$3,100 per author of more than 480,000 works and the $150,000 willful-statutory backdrop.",
+      "url": "https://news.bloomberglaw.com/ip-law/anthropic-authors-1-5-billion-deal-receives-final-approval"
+    },
+    {
+      "id": "authors-guild-google",
+      "label": "Authors Guild v. Google, Inc.",
+      "detail": "804 F.3d 202 (2d Cir. 2015).",
+      "url": "https://scholar.google.com/scholar_case?case=11116665484798013229"
+    },
+    {
+      "id": "hathitrust-case",
+      "label": "Authors Guild, Inc. v. HathiTrust",
+      "detail": "755 F.3d 87 (2d Cir. 2014).",
+      "url": "https://scholar.google.com/scholar_case?case=18128115376638057417"
+    },
+    {
+      "id": "hathitrust-wp",
+      "label": "HathiTrust Digital Library",
+      "detail": "Collection size as of September 2024: more than 18 million volumes, 6.7 million U.S. public domain.",
+      "url": "https://en.wikipedia.org/wiki/HathiTrust_Digital_Library"
+    },
+    {
+      "id": "hathitrust-collection",
+      "label": "HathiTrust, The Collection",
+      "detail": "Library-run repository of Google-era and later library scans.",
+      "url": "https://www.hathitrust.org/the-collection/"
+    },
+    {
+      "id": "google-books-history",
+      "label": "Google Books history",
+      "detail": "Google’s account of non-destructive scanning experiments and the 2004 library project.",
+      "url": "https://books.google.com/intl/en/googlebooks/history.html"
+    },
+    {
+      "id": "ia-digitization",
+      "label": "Internet Archive Digitization Services",
+      "detail": "Scribe workstation description; “completely non destructive digitization service.”",
+      "url": "https://digitization.archive.org/digitization/"
+    },
+    {
+      "id": "ia-about",
+      "label": "Internet Archive Digitization Services, About",
+      "detail": "“Preserving more than 25 million books” since 2006; 41 million books and texts in the Archive’s broader collections figure.",
+      "url": "https://digitization.archive.org/about-us/"
+    },
+    {
+      "id": "ia-process",
+      "label": "Internet Archive process document",
+      "detail": "10 Scribes, one shift: approximately 500 monographs per week. Non-destructive station specification.",
+      "url": "https://archive.org/stream/ProcessDocument/ProcessDoc_revZ_djvu.txt"
+    },
+    {
+      "id": "openculture-2021",
+      "label": "Open Culture",
+      "detail": "“How the Internet Archive Digitizes 3,500 Books a Day,” February 2021.",
+      "url": "https://www.openculture.com/2021/02/how-the-internet-archive-digitizes-3500-books-a-day.html"
+    },
+    {
+      "id": "loc-general",
+      "label": "Library of Congress, General Information",
+      "detail": "More than 178.2 million items; more than 25.77 million cataloged books in the LC classification system.",
+      "url": "https://www.loc.gov/about/general-information"
+    },
+    {
+      "id": "imls-2019",
+      "label": "IMLS Public Libraries Survey, FY 2019",
+      "detail": "686.9 million print materials in U.S. public libraries (Tables 20 and 20A).",
+      "url": "https://imls.gov/sites/default/files/2021-08/fy19-pls-results.pdf"
+    },
+    {
+      "id": "bwb-2023",
+      "label": "Better World Books press release",
+      "detail": "March 2, 2023: donated over 35 million books; reused or recycled more than 447 million.",
+      "url": "https://press.betterworldbooks.com/better-world-books-donates-40000-to-local-literacy-programs-in-north-america-and-20000-in-uk/"
+    },
+    {
+      "id": "verge-harpercollins",
+      "label": "The Verge, HarperCollins licensing",
+      "detail": "Jay Peters, “HarperCollins is asking authors to license their books for AI training,” November 18, 2024. Cited in Turvey Decl. n.2 as $5,000 per backlist nonfiction book, three-year term, author opt-in.",
+      "url": "https://www.theverge.com/2024/11/18/24299882/harpercollins-authors-license-books-ai-training"
+    }
+  ]
+}

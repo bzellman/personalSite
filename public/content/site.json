@@ -28,31 +28,35 @@
     "nav": [
       {
         "label": "Projects",
-        "href": "#projects"
+        "href": "/#projects"
+      },
+      {
+        "label": "Features",
+        "href": "/#features"
       },
       {
         "label": "Services",
-        "href": "#services"
+        "href": "/#services"
       },
       {
         "label": "Process",
-        "href": "#process"
+        "href": "/#process"
       },
       {
         "label": "Experience",
-        "href": "#experience"
+        "href": "/#experience"
       },
       {
         "label": "About",
-        "href": "#about"
+        "href": "/#about"
       },
       {
         "label": "Fun Stuff",
-        "href": "#shipped"
+        "href": "/#shipped"
       },
       {
         "label": "Contact",
-        "href": "#contact"
+        "href": "/#contact"
       }
     ]
   },
@@ -165,6 +169,20 @@
           ],
           "href": "https://en.wikipedia.org/wiki/Tradesy",
           "image": "/images/tradesy-logo.jpeg"
+        }
+      ]
+    },
+    "features": {
+      "enabled": true,
+      "label": "02.",
+      "title": "Features",
+      "intro": "Longer pieces that keep the source trail attached. The first one is a reconstruction of Project Panama: what Anthropic destroyed, what it paid for, and which digitization paths it did not take.",
+      "items": [
+        {
+          "title": "Intact copies were an option",
+          "dek": "Court records in Bartz v. Anthropic show how Claude’s maker built a private book library — pirate caches first, then millions of purchased print books discarded after scanning. Other programs had already solved this without the shredder. The $1.5 billion settlement did not buy the paper back.",
+          "href": "/panama.html",
+          "image": "/images/panama-scale.svg"
         }
       ]
     },
