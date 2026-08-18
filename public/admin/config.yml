@@ -120,6 +120,23 @@ collections:
                       - {label: "Image", name: "image", widget: "image", required: false}
                       - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
                       - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+              - label: "Features"
+                name: "features"
+                widget: "object"
+                fields:
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
+                  - {label: "Section Label", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+                  - label: "Feature Items"
+                    name: "items"
+                    widget: "list"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - {label: "Title", name: "title", widget: "string"}
+                      - {label: "Dek", name: "dek", widget: "text"}
+                      - {label: "URL", name: "href", widget: "string"}
+                      - {label: "Image", name: "image", widget: "image", required: false}
               - label: "Services"
                 name: "services"
                 widget: "object"

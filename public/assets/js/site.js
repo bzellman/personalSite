@@ -119,6 +119,28 @@ function renderShipped(data) {
   </section>`;
 }
 
+function renderFeatures(data) {
+  if (!sectionOn(data, 'features')) return '';
+  const s = data.sections.features;
+  return `<section id="features" class="section light">
+    <div class="section-label">${esc(s.label)}</div>
+    <div class="section-body">
+      <h2 class="section-title">${esc(s.title)}</h2>
+      <p class="section-intro">${esc(s.intro)}</p>
+      <div class="feature-list">
+        ${(s.items || []).map(item => `<a class="feature-entry" href="${attr(safeHref(item.href || '#'))}"${linkAttrs(item.href || '')}>
+          <div class="feature-entry-copy">
+            <h3>${esc(item.title)}</h3>
+            <p>${esc(item.dek)}</p>
+            <span class="feature-entry-cta">Open the feature <span aria-hidden="true">↗</span></span>
+          </div>
+          <div class="feature-entry-visual">${item.image ? `<img src="${attr(item.image)}" alt="" loading="lazy" />` : ''}</div>
+        </a>`).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+
 function renderServices(data) {
   if (!sectionOn(data, 'services')) return '';
   const s = data.sections.services;
@@ -210,7 +232,7 @@ async function boot() {
     const data = await response.json();
     updateMeta(data);
     renderShell(data);
-    root.innerHTML = [renderHero(data), renderTicker(data), renderProjects(data), renderServices(data), renderProcess(data), renderExperience(data), renderAbout(data), renderShipped(data), renderContact(data)].join('');
+    root.innerHTML = [renderHero(data), renderTicker(data), renderProjects(data), renderFeatures(data), renderServices(data), renderProcess(data), renderExperience(data), renderAbout(data), renderShipped(data), renderContact(data)].join('');
     renderFooter(data);
   } catch (error) {
     console.error(error);
